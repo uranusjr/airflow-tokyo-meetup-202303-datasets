@@ -202,7 +202,7 @@ def use_s3_data():
 
 - Datasets are specialised [data lineage](https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/lineage.html)
 - `DAG(schedule=...)` from [AIP-39](https://cwiki.apache.org/confluence/display/AIRFLOW/AIP-39+Richer+scheduler_interval)
-- Scheduler needs to learn new tricks
+- Publish-subscribe pattern
 
 ---
 
@@ -215,6 +215,18 @@ def use_s3_data():
 ---
 
 ## Rich scheduling
+
+...
+
+---
+
+## [PubSub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)
+
+- Metadatabase stores published messages
+- Dataset Manager subscribes DAGs on parse
+- Scheduler loop calls Dataset Manager
+
+<!-- Use a flow graph instead? -->
 
 ---
 
